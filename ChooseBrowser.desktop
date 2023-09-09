@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=Select a browser
+Icon=applications-other
+Exec=sh -c "url=%u; if zenity --question --default-cancel --text \"Do you want to preserve your logins?\"; then cd /var/lib/flatpak/exports/share/applications/ && gio launch com.github.Eloston.UngoogledChromium.desktop \$url; else cd /usr/share/applications/ && gio launch firefox.desktop \$url; fi"
+Categories=Network;WebBrowser;
+Keywords=web;browser;internet;
+MimeType=x-scheme-handler/unknown;x-scheme-handler/about;text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;
